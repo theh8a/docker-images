@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.0.3-base-ubuntu20.04
+FROM nvidia/cuda:11.5.1-devel-ubuntu20.04
 
 ENV COLMAP_VERSION=3.7
 ENV CMAKE_VERSION=3.21.0
