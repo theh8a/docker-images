@@ -89,6 +89,9 @@ RUN set -ex; \
   sed -i 's/taskmanager.bind-host: localhost/taskmanager.bind-host: 0.0.0.0/g' $FLINK_HOME/conf/flink-conf.yaml; \
   sed -i '/taskmanager.host: localhost/d' $FLINK_HOME/conf/flink-conf.yaml;
 
+# Install Iceberg
+ADD https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-flink-runtime-1.15/1.0.0/iceberg-flink-runtime-1.15-1.0.0.jar /opt/flink/opt
+
 # Configure container
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
