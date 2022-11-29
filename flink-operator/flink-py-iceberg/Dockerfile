@@ -22,8 +22,8 @@ FROM eclipse-temurin:11-jre-jammy
 RUN set -ex; \
   apt-get update; \
   apt-get -y install gpg libsnappy1v5 gettext-base libjemalloc-dev python3 python3-pip; \
-  pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
   pip install --upgrade pip setuptools --no-cache-dir && \
+  pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
   rm -rf /var/lib/apt/lists/*
 
 # Grab gosu for easy step-down from root
