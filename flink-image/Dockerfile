@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM registry.cn-hangzhou.aliyuncs.com/realazy/eclipse-temurin:11-jre-jammy
+FROM eclipse-temurin:11-jre-jammy
 
 # Install dependencies
 RUN set -ex; \
