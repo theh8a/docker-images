@@ -16,7 +16,7 @@
 # limitations under the License.
 ###############################################################################
 
-FROM eclipse-temurin:11-jre-jammy
+FROM registry.cn-hangzhou.aliyuncs.com/realazy/eclipse-temurin:11-jre-jammy
 
 # Install dependencies
 RUN set -ex; \
@@ -78,8 +78,8 @@ RUN set -ex; \
   tar -xf flink.tgz --strip-components=1; \
   rm flink.tgz; \
   wget -o ./opt/iceberg-flink-runtime-1.16-1.1.0.jar https://search.maven.org/remotecontent?filepath=org/apache/iceberg/iceberg-flink-runtime-1.16/1.1.0/iceberg-flink-runtime-1.16-1.1.0.jar; \
-  mkdir ./plugins/s3-fs-hadoop; \
-  cp ./opt/flink-s3-fs-hadoop-1.16.0.jar ./plugins/s3-fs-hadoop/; \
+  mkdir ./plugins/s3-fs-presto; \
+  cp ./opt/flink-s3-fs-presto-1.16.0.jar ./plugins/s3-fs-presto/; \
   chown -R flink:flink .; \
   \
   # Replace default REST/RPC endpoint bind address to use the container's network interface \
