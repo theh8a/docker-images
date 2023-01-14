@@ -1,1 +1,1 @@
-FROM kubeedge/edgemesh-agent:v1.12.0
+FROM kubeedge/edgemesh-agent:latest
